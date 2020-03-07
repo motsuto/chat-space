@@ -2,15 +2,15 @@
   .sideBar__top
     .sideBar__top__items
       .sideBar__top__items__name
-        masa
+        = current_user.name
       .sideBar__top__items__icon
         = link_to "#", class: "sideBar__top__items__icon__btn" do
-          = icon('fa', 'edit')
-        = link_to "#", class: "sideBar__top__items__icon__btn" do
-          = icon('fa', 'cog')
+          = icon('fa', 'edit', class: 'icon')
+        = link_to edit_user_path(current_user), class: "sideBar__top__items__icon__btn" do
+          = icon('fa', 'cog', class: 'icon')
   .sideBar__list
     .sideBar__list__group
       .sideBar__list__group--name
-        techcamp
+        グループ名
       .sideBar__list__group--message
-        まだメッセージはありません
+        新着メッセージ
