@@ -1,0 +1,51 @@
+$mainWhiteColor: #ffffff;
+
+.sideBar {
+  float: left;
+  background-color: #253141;
+  width: 300px;
+  color: $mainWhiteColor;
+  &__top {
+    background-color: #253141;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    &__items {
+      margin: 0 auto;
+      height: 20px;
+      width: 260px;
+      display: flex;
+      justify-content: space-between;
+      &__name {
+        line-height: 20px;
+        font-size: 16px;
+      }
+      &__icon {
+        line-height: 20px;
+        width: 60px;
+        text-align: right;
+        &__btn {
+          color: $mainWhiteColor;
+          margin-left: 5px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &__list {
+    background-color: #2f3e51;
+    height: calc(100vh - 100px);
+    padding: 20px 20px 0;
+    &__group {
+      height: 91px;
+      &--name {
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      &--message {
+        font-size: 11px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
