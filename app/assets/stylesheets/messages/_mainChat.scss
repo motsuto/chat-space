@@ -1,0 +1,105 @@
+$mainBlueColor: #38aef0;
+$mainWhiteColor: #ffffff;
+
+.mainChat {
+  float: right;
+  background-color: $mainWhiteColor;
+  width: calc(100vw - 300px);
+  &__info {
+    background-color: $mainWhiteColor;
+    padding: 0 40px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    &__group {
+      padding-top: 35px;
+      &--name {
+        margin-bottom: 15px;
+        color: #333333;
+        font-size: 20px;
+      }
+      &--contributor {
+        color: #999999;
+        font-size: 12px;
+      }
+    }
+    &__edit__btn {
+        font-size: 16px;
+        color: #38aef0;
+        text-decoration: none;
+        height: 40px;
+        width: 72px;
+        line-height: 40px;
+        padding: 0 20px;
+        margin-top: 28px;
+        border: 1px solid $mainBlueColor;
+        right: 40px;
+    }
+  }
+  &__message {
+    background-color: #fafafa;
+    height: calc(100vh - 100px - 90px);
+    &__items {
+      padding-top: 35px;
+      margin-left: 40px;
+      &__title {
+        display: flex;
+        justify-content: flex-start;
+        &--name {
+          color: #333333;
+          font-size: 16px;
+        }
+        &--date {
+          color: #999999;
+          font-size: 12px;
+        }
+      }
+      &--write {
+        margin-top: 12px;
+        color: #434A54;
+        font-size: 14px;
+        margin-bottom: 46px;
+      }
+    }
+  }
+  &__form {
+    background-color: #d2d2d2;
+    height: 90px;
+    padding: 20px 40px;
+    &__items {
+      height: 50px;
+      line-height: 50px;
+      display: flex;
+      justify-content: space-between;
+      &__box {
+        display: flex;
+        background-color: $mainWhiteColor;
+        width: 100%;
+        position: relative;
+        &__text {
+          height: 50px;
+          width: 100%;
+          padding: 0 40px 0 10px;
+          color: #999999;
+        }
+        .main_chat__form__items__img--btn {
+          position: absolute;
+          right: 10px;
+          color: black;
+          &--file {
+            display: none;
+          }
+        }
+      }
+      .main_chat__from__items__send--btn {
+        width: 100px;
+        height: 50px;
+        padding: 0 30px;
+        margin-left: 15px;
+        background-color: $mainBlueColor;
+        color: $mainWhiteColor;
+        text-decoration: none;
+      }
+    }
+  }
+}
