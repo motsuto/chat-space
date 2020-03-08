@@ -4,13 +4,16 @@
       .sideBar__top__items__name
         = current_user.name
       .sideBar__top__items__icon
-        = link_to "#", class: "sideBar__top__items__icon__btn" do
+        = link_to new_group_path, class: "sideBar__top__items__icon__btn" do
           = icon('fa', 'edit', class: 'icon')
         = link_to edit_user_path(current_user), class: "sideBar__top__items__icon__btn" do
           = icon('fa', 'cog', class: 'icon')
   .sideBar__list
-    .sideBar__list__group
-      .sideBar__list__group--name
-        グループ名
-      .sideBar__list__group--message
-        新着メッセージ
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .sideBar__list__group
+            .sideBar__list__group--name
+              = group.name
+            .sideBar__list__group--message
+              新着メッセージ
