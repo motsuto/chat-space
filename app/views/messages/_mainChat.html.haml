@@ -18,13 +18,14 @@
       .mainChat__message__items--writing
         おはよう！  
   .mainChat__form
+    = form_for [@group, @message] do |f|
     .mainChat__form__items
       .mainChat__form__items__box
-        %input.mainChat__form__items__box__text{:placeholder => "type a message", :type => "text",}
+        = f.text_field :content, class: 'mainChat__form__items__box__text', placeholder: 'type a message'
         .mainChat__form__items__box__img
-          %label{class: "main_chat__form__items__img--btn"}
+          = f.label :image, class: 'main_chat__form__items__img--btn' do
             = icon('fas', 'images')
-            %input{type: "file", class: "main_chat__form__items__img--btn--file"}
+            = f.file_field :image, class: 'main_chat__form__items__img--btn--file'
       .mainChat__form__items__send
-      = link_to edit_group_path, class: "main_chat__from__items__send--btn" do
-        Send
+      = f.submit 'Send', class: 'main_chat__from__items__send--btn'
+        -# Send
