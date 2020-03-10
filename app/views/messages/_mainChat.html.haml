@@ -9,14 +9,15 @@
     = link_to "#", class: "mainChat__info__edit__btn" do
       Edit
   .mainChat__message
-    .mainChat__message__items
-      .mainChat__message__items__title
-        .mainChat__message__items__title--name
-          masa
-        .mainChat__message__items__title--date
-          2019/11/20(Web) 17.43.01
-      .mainChat__message__items--writing
-        おはよう！  
+    = render @messages
+    -# .mainChat__message__items
+    -#   .mainChat__message__items__title
+    -#     .mainChat__message__items__title--name
+    -#       masa
+    -#     .mainChat__message__items__title--date
+    -#       2019/11/20(Web) 17.43.01
+    -#   .mainChat__message__items--writing
+    -#     おはよう！
   .mainChat__form
     = form_for [@group, @message] do |f|
     .mainChat__form__items
