@@ -2,29 +2,30 @@
   .mainChat__info
     .mainChat__info__group
       .mainChat__info__group--name
-        test
+        = group.name
       .mainChat__info__group--contributor
-        Member : masa
+        = group.user.name
     .mainChat__info__edit
-    = link_to "#", class: "mainChat__info__edit__btn" do
-      Edit
+    = link_to esit_group_path, 'Edit', class: "mainChat__info__edit__btn" do
   .mainChat__message
-    .mainChat__message__items
-      .mainChat__message__items__title
-        .mainChat__message__items__title--name
-          masa
-        .mainChat__message__items__title--date
-          2019/11/20(Web) 17.43.01
-      .mainChat__message__items--writing
-        おはよう！  
+    = render @messages
+    -# .mainChat__message__items
+    -#   .mainChat__message__items__title
+    -#     .mainChat__message__items__title--name
+    -#       masa
+    -#     .mainChat__message__items__title--date
+    -#       2019/11/20(Web) 17.43.01
+    -#   .mainChat__message__items--writing
+    -#     おはよう！
   .mainChat__form
+    = form_for [@group, @message] do |f|
     .mainChat__form__items
       .mainChat__form__items__box
-        %input.mainChat__form__items__box__text{:placeholder => "type a message", :type => "text",}
+        = f.text_field :content, class: 'mainChat__form__items__box__text', placeholder: 'type a message'
         .mainChat__form__items__box__img
-          %label{class: "main_chat__form__items__img--btn"}
+          = f.label :image, class: 'main_chat__form__items__img--btn' do
             = icon('fas', 'images')
-            %input{type: "file", class: "main_chat__form__items__img--btn--file"}
+            = f.file_field :image, class: 'main_chat__form__items__img--btn--file'
       .mainChat__form__items__send
-      = link_to edit_group_path, class: "main_chat__from__items__send--btn" do
-        Send
+      = f.submit 'Send', class: 'main_chat__from__items__send--btn'
+        -# Send
