@@ -2,12 +2,11 @@
   .mainChat__info
     .mainChat__info__group
       .mainChat__info__group--name
-        test
+        = group.name
       .mainChat__info__group--contributor
-        Member : masa
+        = group.user.name
     .mainChat__info__edit
-    = link_to "#", class: "mainChat__info__edit__btn" do
-      Edit
+    = link_to esit_group_path, 'Edit', class: "mainChat__info__edit__btn" do
   .mainChat__message
     = render @messages
     -# .mainChat__message__items
