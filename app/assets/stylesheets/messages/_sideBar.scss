@@ -38,13 +38,16 @@ $mainWhiteColor: #ffffff;
     padding: 20px 20px 0;
     &__group {
       height: 91px;
+      text-decoration: none;
       &--name {
         font-size: 15px;
         margin-bottom: 5px;
+        color: $mainWhiteColor;
       }
       &--message {
         font-size: 11px;
         margin-bottom: 40px;
+        color: $mainWhiteColor;
       }
     }
   }
