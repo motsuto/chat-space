@@ -37,6 +37,7 @@ $mainWhiteColor: #ffffff;
     }
   }
   &__message {
+    overflow: scroll;
     background-color: #fafafa;
     height: calc(100vh - 100px - 90px);
     &__items {
@@ -91,7 +92,7 @@ $mainWhiteColor: #ffffff;
           }
         }
       }
-      .main_chat__from__items__send--btn {
+      .mainChat__form__items__send--btn {
         width: 100px;
         height: 50px;
         padding: 0 30px;
