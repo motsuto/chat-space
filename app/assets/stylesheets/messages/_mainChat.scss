@@ -40,11 +40,11 @@ $mainWhiteColor: #ffffff;
     overflow: scroll;
     background-color: #fafafa;
     height: calc(100vh - 100px - 90px);
-    margin-bottom: 46px;
     padding-left: 40px;
     .upper-message {
       padding-top: 35px;
       &__title {
+        height: 17px;
         display: flex;
         justify-content: flex-start;
         margin-bottom: 12px;
