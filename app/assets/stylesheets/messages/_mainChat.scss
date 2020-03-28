@@ -43,9 +43,11 @@ $mainWhiteColor: #ffffff;
     padding-left: 40px;
     .upper-message {
       padding-top: 35px;
+      width: 100%;
       display: flex;
       justify-content: flex-start;
       &__user-name {
+        font-weight: bold;
         color: #333333;
         font-size: 16px;
         margin-right: 10px;
