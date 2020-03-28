@@ -42,29 +42,30 @@ $mainWhiteColor: #ffffff;
     height: calc(100vh - 100px - 90px);
     padding-top: 35px;
     padding-left: 40px;
-    &__items {
+    .upper-message {
       padding-top: 35px;
       margin-bottom: 46px;
       &__title {
         display: flex;
         justify-content: flex-start;
         margin-bottom: 12px;
-        &--name {
+        &__user-name {
           color: #333333;
           font-size: 16px;
           margin-right: 10px;
+          font-size: 16px;
         }
-        &--date {
+        &__date {
           color: #999999;
           font-size: 12px;
         }
       }
-      &--write {
-        margin-top: 12px;
-        color: #434A54;
-        font-size: 14px;
-        margin-bottom: 46px;
-      }
+    }
+    .lower-message {
+      margin-top: 12px;
+      color: #434A54;
+      font-size: 14px;
+      margin-bottom: 46px;
     }
   }
   &__form {
