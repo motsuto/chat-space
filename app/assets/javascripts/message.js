@@ -1,43 +1,43 @@
 $(function(){ 
   function buildHTML(message){
-    if ( message.image ) {
-      var html =
-       `<div class="mainChat__message" data-message-id= message.id>
-          <div class="mainChat__message__items">
-            <div class="mainChat__message__items__title--name">
-              ${message.user_name}
-            </div>
-            <div class="mainChat__message__items__title--date">
-              ${message.created_at}
-            </div>
-          </div>
-          <div class="mainChat__message__items--write">
-            <p class="mainChat__message__items--write__content">
-              ${message.content}
-            </p>
-          </div>
-          <img src=${message.image} >
-        </div>`
-      return html;
-    } else {
-      var html =
-       `<div class="mainChat__message">
-          <div class="mainChat__message__items">
-            <div class="mainChat__message__items__title--name">
-              ${message.user_name}
-            </div>
-            <div class="mainChat__message__items__title--date">
-              ${message.created_at}
-            </div>
-          </div>
-          <div class="mainChat__message__items--write">
-            <p class="mainChat__message__items--write__content">
-              ${message.content}
-            </p>
-          </div>
-        </div>`
-      return html;
-    };
+   if ( message.image ) {
+     var html =
+      `<div class="message" data-message-id=${message.id}>
+         <div class="upper-message">
+           <div class="upper-message__user-name">
+             ${message.user_name}
+           </div>
+           <div class="upper-message__date">
+             ${message.created_at}
+           </div>
+         </div>
+         <div class="lower-message">
+           <p class="lower-message__content">
+             ${message.content}
+           </p>
+         </div>
+         <img src=${message.image} >
+       </div>`
+     return html;
+   } else {
+     var html =
+      `<div class="message" data-message-id=${message.id}>
+         <div class="upper-message">
+           <div class="upper-message__user-name">
+             ${message.user_name}
+           </div>
+           <div class="upper-message__date">
+             ${message.created_at}
+           </div>
+         </div>
+         <div class="lower-message">
+           <p class="lower-message__content">
+             ${message.content}
+           </p>
+         </div>
+       </div>`
+     return html;
+   };
   }
   $('#new_message').on('submit', function(e){
       e.preventDefault();
