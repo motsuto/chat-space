@@ -40,15 +40,19 @@ $mainWhiteColor: #ffffff;
     overflow: scroll;
     background-color: #fafafa;
     height: calc(100vh - 100px - 90px);
+    padding-top: 35px;
+    padding-left: 40px;
     &__items {
       padding-top: 35px;
-      margin-left: 40px;
+      margin-bottom: 46px;
       &__title {
         display: flex;
         justify-content: flex-start;
+        margin-bottom: 12px;
         &--name {
           color: #333333;
           font-size: 16px;
+          margin-right: 10px;
         }
         &--date {
           color: #999999;
